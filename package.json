@@ -1,0 +1,14 @@
+{
+    "name": "node-api",
+    "main": "build/app.js",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "mongoose": "^5.1.6"
+    },
+    "devDependencies": {
+        "@types/express": "^4.16.0",
+        "@types/mongoose": "^5.0.17",
+        "@types/node": "^10.3.4"
+    }
+}

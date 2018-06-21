@@ -1,0 +1,14 @@
+"use strict";
+exports.__esModule = true;
+var express = require("express");
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+var routes_1 = require("./routes");
+var app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+mongoose.connect('mongodb://localhost:27017/users');
+var port = Number(process.env.PORT) || 8080;
+app.use('/api', routes_1.router);
+app.listen(port);
+console.log('API running on http://localhost:' + port + "/api");
